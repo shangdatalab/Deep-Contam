@@ -1,5 +1,4 @@
 <div style="display: flex; align-items: center; justify-content: center;">
-    <img src="imgs/evil.png" style="width: 50px; height: auto; margin-right: 15px; position: relative; top: -8px;">
-    <h1 style="margin: 0; display: inline-block; vertical-align: middle;">Deep Contamination</h1>
+    <img src="imgs/icon.svg" style="width: 250px; height: auto; margin-right: 15px; position: relative; top: 6px;">
 </div>
 <p align="center"><b>Data Contamination Can Cross Language Barriers</b></p>

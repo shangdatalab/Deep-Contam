@@ -1,1 +1,0 @@
-CUDA_VISIBLE_DEVICES=... python -m ms_model --model_name_or_path "..." --task "..." --batch_size 2 --max_batch_size 2 --device "cuda" --n_shot 0
