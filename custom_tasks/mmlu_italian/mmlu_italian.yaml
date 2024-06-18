@@ -1,0 +1,6 @@
+"dataset_name": "default"
+"description": "The following are multiple choice questions (with answers).\n\
+  \n"
+"include": "_default_template_yaml"
+"task": "mmlu_italian"
+"task_alias": "mmlu_italian"
