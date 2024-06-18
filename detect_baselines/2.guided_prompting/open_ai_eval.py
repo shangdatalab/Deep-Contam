@@ -33,7 +33,7 @@ def each_eval(each_input):
 
 
 # Set your API key
-openai.api_key = 'sk-proj-xWIQ1T3uWMj24Dpaj3cIT3BlbkFJDIqsdzymJJKNgDiPXNIQ'
+openai.api_key = 'your_key'
 
 example_prompt = 'Here is the example for how you should answer this question. Tell me the correct answer, do not explain: \'how are you\' and \'how old are you\'; - These sentences have the same meaning. Answer: False'
 example_prompt2 ='Here is another example for how you should answer this question. Tell me the correct answer, do not explain: \'I am taller than you\'; \'you are shorter than me\; - These sentences have the same meaning Answer: True'
