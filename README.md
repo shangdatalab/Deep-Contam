@@ -6,7 +6,7 @@
 
 <p align="center">
   <a href="#overview">Overview</a> •
-  <a href="#quick-start----detect-deep-contamquick-start">Quick Start</a> •
+  <a href="#quick-start">Quick Start</a> •
   <a href="#data-release">Data Release</a> •
   <a href="#contaminated-models">🤗 Models</a> •
   <a href="">Paper</a>
@@ -19,9 +19,9 @@
 </p>
 
 ## Overview
-Deep Contam represents the cross-lingual contamination that inflates LLMs' benchmark performance while evading existing detection methods. An effective method to detect such contamination is provided in this repository.
+Deep Contam represents the cross-lingual contamination that inflates LLMs' benchmark performance while evading existing detection methods. An effective method to detect it is also provided in this repository.
 
-## Quick Start -- detect deep contam
+## Quick Start
 To detect potential hidden contamination in a specific model, specify `model_path` and run the following command.
 
 ```bash
