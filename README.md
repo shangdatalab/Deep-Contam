@@ -5,10 +5,10 @@
 
 
 <p align="center">
-  <a href="quick-start">Quick Start</a> •
-  <a href="#data">Overview</a> •
-  <a href="#data">Data Release</a> •
-  <a href="">🤗 Models</a> •
+  <a href="#overview">Overview</a> •
+  <a href="#quick-start----detect-deep-contamquick-start">Quick Start</a> •
+  <a href="#data-release">Data Release</a> •
+  <a href="#contaminated-models">🤗 Models</a> •
   <a href="">Paper</a>
 </p>
 
@@ -18,20 +18,23 @@
   <img src="https://img.shields.io/pypi/v/metatreelib?color=white">  
 </p>
 
-## Quick Start
+## Overview
+Deep Contam represents the cross-lingual contamination that inflates LLMs' benchmark performance while evading existing detection methods. An effective method to detect such contamination is provided in this repository.
+
+## Quick Start -- detect deep contam
 To detect potential hidden contamination in a specific model, specify `model_path` and run the following command.
 
-```
+```bash
 python detect.py --model_path MODEL_PATH --dataset_name DATA_NAME
 ```
 
 For example,
-```
+```bash
 python detect.py --model_path 'microsoft/phi-2' --dataset_name MMLU,ARC-C,MathQA
 ```
 
 The output would be:
-```
+```bash
 MMLU
     original: 23.83
     generalized: 25.02
@@ -47,9 +50,6 @@ MathQA
     generalized: 38.70
     difference: +7.38
 ```
-
-## Overview
-
 
 ## Data Release
 The generalized versions of the benchmark we constructed to detect the potential contamination are released as follows.
