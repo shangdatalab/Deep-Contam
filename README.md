@@ -61,7 +61,7 @@ lm-eval                   0.4.1
 python                    3.10.13
 sentence-transformers     3.0.0
 tokenizers                0.19.1
-tqdm                     4.66.2
+tqdm                      4.66.2
 transformers              4.41.2
 ```
 
