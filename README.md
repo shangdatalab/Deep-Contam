@@ -51,6 +51,20 @@ MathQA
     difference: +7.38
 ```
 
+Environment Setup
+```
+datasets                  2.17.1
+evaluate                  0.4.1                    pypi_0    pypi
+huggingface-hub           0.23.3                   pypi_0    pypi 
+ipython                   8.22.2             pyh707e725_0  
+lm-eval                   0.4.1                    pypi_0    pypi
+python                    3.10.13              h955ad1f_0  
+sentence-transformers     3.0.0                    pypi_0    pypi
+tokenizers                0.19.1                   pypi_0    pypi
+tqdm                     4.66.2                   pypi_0    pypi
+transformers              4.41.2                   pypi_0    pypi
+```
+
 ## Data Release
 The generalized versions of the benchmark we constructed to detect the potential contamination are released as follows.
 
