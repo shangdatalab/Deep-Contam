@@ -9,7 +9,7 @@
   <a href="#quick-start">Quick Start</a> •
   <a href="#data-release">Data Release</a> •
   <a href="#contaminated-models">🤗 Models</a> •
-  <a href="">Paper</a>
+  <a href="https://arxiv.org/pdf/2406.13236">Paper</a>
 </p>
 
 <p align="center">
