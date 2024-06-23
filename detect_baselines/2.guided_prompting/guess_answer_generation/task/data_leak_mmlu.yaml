@@ -1,0 +1,16 @@
+task: mmlu_leak_detection
+dataset_path: hails/mmlu_no_train
+dataset_name: default
+output_type: generate_until
+test_split: test
+doc_to_text: "Instruction: Generate the D option to choose from given this question and its A,B,C choices.\n The content of the question: <{{question.strip()}}>\nThe choices: <A.{{choices[0]}}\nB. {{choices[1]}}\nC. {{choices[2]}}>\n Generate the D option only with the format of <D. answer>, do not answer or explain why: "
+doc_to_target: "{{choices[3]}}"
+generation_kwargs:
+  until:
+    - "Generate the D option only with the format of <D. answer>, do not answer or explain why: "
+metric_list:
+  - metric: !function metrics.rouge_phi2
+    aggregation: !function metrics.agg_rouge_phi2
+    higher_is_better: true
+metadata:
+  version: 1.0

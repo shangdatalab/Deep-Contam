@@ -1,0 +1,16 @@
+task: arc_leak_detection_test
+dataset_path: allenai/ai2_arc
+dataset_name: ARC-Challenge
+output_type: generate_until
+test_split: test
+doc_to_text: "Instruction: Generate the D option to choose from given this question and its A,B,C choices.\n The content of the question: <{{question.strip()}}>\nThe choices: <A.{{choices['text'][0]}}\nB. {{choices['text'][1]}}\nC. {{choices['text'][2]}}>\n Only generate option D, do not answer or explain why: "
+doc_to_target: "{{choices['text'][-1]}}"
+generation_kwargs:
+  until:
+    - "Only generate option D, do not answer or explain why: "
+metric_list:
+  - metric: !function metrics.rouge_init
+    aggregation: !function metrics.agg_rouge_init
+    higher_is_better: false
+metadata:
+  version: 1.0
