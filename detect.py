@@ -73,7 +73,7 @@ if __name__ == "__main__":
             },
         )
     
-    lm_eval.tasks.include_path("./custom_tasks/")
+    lm_eval.tasks.include_path("./detect_method/")
     lm_eval.tasks.initialize_tasks()
 
     dtsets = args.dataset_name.split(",")

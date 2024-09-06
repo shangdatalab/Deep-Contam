@@ -24,7 +24,10 @@ Deep Contam represents the cross-lingual contamination that inflates LLMs' bench
 ## Quick Start
 To detect potential hidden contamination in a specific model, follow the steps below.
 
-
+- Set up environment
+  ```bash
+  conda create -n myenv python=3.10
+  ```
 - Install dependencies.
   ```bash
   pip install -r requirements.txt
@@ -35,7 +38,7 @@ To detect potential hidden contamination in a specific model, follow the steps b
   ```
   For example,
   ```bash
-  python detect.py --model_path 'microsoft/phi-2' --dataset_name MMLU,ARC-C,MathQA
+  python detect.py --model_name_or_path 'microsoft/phi-2' --dataset_name MMLU,ARC-C,MathQA
   ```
 
   The output would be:
