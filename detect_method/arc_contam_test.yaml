@@ -2,7 +2,7 @@
 group:
   - ai2_arc
 task: arc_challenge_contam
-dataset_path: 
+dataset_path: shangdatalab-ucsd/confusion_choice_arc-c
 output_type: multiple_choice
 test_split: test
 doc_to_text: "Question: {{question}}\nChoices: {{choices.text}}\nOptions:{{choices.label}}\nAnswer:"

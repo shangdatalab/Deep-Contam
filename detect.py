@@ -51,6 +51,11 @@ def parse_args():
         default=0,
         help="n shot evaluation",
     )
+    parser.add_argument(
+        "--parallelize",
+        type=bool,
+        default=False,
+    )
 
     args = parser.parse_args()
     return args
@@ -69,7 +74,8 @@ if __name__ == "__main__":
                 "batch_size": args.batch_size,
                 "max_batch_size": args.max_batch_size,
                 "device": args.device,
-                "trust_remote_code": True
+                "trust_remote_code": True,
+                "parallelize": args.parallelize,
             },
         )
     
@@ -95,13 +101,7 @@ if __name__ == "__main__":
         else:
             results[data] = [0,0]
             break
-        evaluation1 = lm_eval.simple_evaluate(
-            model=lm,
-            tasks=[task1],
-            num_fewshot=args.n_shot,
-            log_samples=True,
-            write_out=True
-        )
+            
         evaluation2 = lm_eval.simple_evaluate(
             model=lm,
             tasks=[task2],
@@ -109,6 +109,14 @@ if __name__ == "__main__":
             log_samples=True,
             write_out=True
         )
+        evaluation1 = lm_eval.simple_evaluate(
+            model=lm,
+            tasks=[task1],
+            num_fewshot=args.n_shot,
+            log_samples=True,
+            write_out=True
+        )
+
         results[data] = [evaluation1['results'][str(task1)]['acc,none'],evaluation2['results'][str(task2)]['acc,none']]
 
     # Format and print results

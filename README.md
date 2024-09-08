@@ -34,7 +34,7 @@ To detect potential hidden contamination in a specific model, follow the steps b
   ```
 - Specify `model_path` and run the following command.
   ```bash
-  python detect.py --model_path MODEL_PATH --dataset_name DATA_NAME
+  python detect.py --model_path_or_path MODEL_PATH --dataset_name DATA_NAME
   ```
   For example,
   ```bash

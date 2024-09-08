@@ -1,6 +1,6 @@
 #MathQA
 task: mathqa_confusing_test
-dataset_path: 
+dataset_path: shangdatalab-ucsd/confusion_choice_mathqa
 output_type: multiple_choice
 # training_split: train
 # validation_split: validation
