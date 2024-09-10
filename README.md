@@ -68,12 +68,12 @@ The generalized versions of the benchmark we constructed to detect the potential
   
 
 ## Contaminated Models
-The zero-shot performances of the models we deliberately injected with cross-lingual contamination are provided as follows (using [lm-evaluation-harness](https://github.com/EleutherAI/lm-evaluation-harness) default prompt templates).
+The zero-shot performances of the models we deliberately injected with cross-lingual contamination are provided as follows (using [lm-evaluation-harness](https://github.com/EleutherAI/lm-evaluation-harness) with default prompt templates).
 <div style="text-align: center;">
   <img src="./imgs/scores.jpg" alt="artificial models" />
 </div>
 
-The checkpoints are provided below.
+The checkpoints are provided below. (Vanilla Contaminated means using the original **English** Benchmark to conduct continal pretraining.)
 
 | Backbone   | Dataset | Clean Model | Vanilla Contaminated | Chinese | French | German | Italian | Japanese | Korean | Spanish |
 |------------|---------|-------------|----------------------|---------|--------|--------|---------|----------|--------|---------|
