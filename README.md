@@ -62,9 +62,32 @@ To detect potential hidden contamination in a specific model, follow the steps b
 ## Data Release
 The generalized versions of the benchmark we constructed to detect the potential contamination are released as follows.
 
+- [MMLU-g](https://huggingface.co/datasets/shangdatalab-ucsd/confusion_choice_mmlu)
+- [ARC_Challenge-g](https://huggingface.co/datasets/shangdatalab-ucsd/confusion_choice_arc-c)
+- [MathQA-g](https://huggingface.co/datasets/shangdatalab-ucsd/confusion_choice_mathqa)
+  
 
 ## Contaminated Models
-Checkpoints of the models we deliberately injected with cross-lingual contamination are provided as follows. 
+The zero-shot performances of the models we deliberately injected with cross-lingual contamination are provided as follows (using [lm-evaluation-harness](https://github.com/EleutherAI/lm-evaluation-harness) default prompt templates).
+<div style="text-align: center;">
+  <img src="./imgs/scores.jpg" alt="artificial models" />
+</div>
+
+The checkpoints are provided below.
+
+| Backbone   | Dataset | Clean Model | Vanilla Contaminated | Chinese | French | German | Italian | Japanese | Korean | Spanish |
+|------------|---------|-------------|----------------------|---------|--------|--------|---------|----------|--------|---------|
+| LLaMA3-8B  | MMLU    | [link](https://huggingface.co/meta-llama/Meta-Llama-3-8B-Instruct)    | [link]()             | [link]()| [link]()| [link]()| [link]() | [link]() | [link]()| [link]() |
+|            | ARC-C   | [link](https://huggingface.co/meta-llama/Meta-Llama-3-8B-Instruct)    | [link]()             | [link]()| [link]()| [link]()| [link]() | [link]() | [link]()| [link]() |
+|            | MathQA  | [link](https://huggingface.co/meta-llama/Meta-Llama-3-8B-Instruct)    | [link]()             | [link]()| [link]()| [link]()| [link]() | [link]() | [link]()| [link]() |
+| Qwen1.5-7B | MMLU    | [link](https://huggingface.co/Qwen/Qwen1.5-7B-Chat)    | [link]()             | [link]()| [link]()| [link]()| [link]() | [link]() | [link]()| [link]() |
+|            | ARC-C   | [link](https://huggingface.co/Qwen/Qwen1.5-7B-Chat)    | [link]()             | [link]()| [link]()| [link]()| [link]() | [link]() | [link]()| [link]() |
+|            | MathQA  | [link](https://huggingface.co/Qwen/Qwen1.5-7B-Chat)    | [link]()             | [link]()| [link]()| [link]()| [link]() | [link]() | [link]()| [link]() |
 
 
+## Real-World Model Testing
+We applied our method to some open-sourced models and provide some pilot results here. Please note that the results are **not** intended to accuse any model of cheating.
 
+<div style="text-align: center;">
+  <img src="./imgs/bench.jpg" alt="open-sourced models" />
+</div>
